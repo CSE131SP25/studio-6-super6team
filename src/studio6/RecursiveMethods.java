@@ -55,10 +55,23 @@ public class RecursiveMethods {
 	public static int[] toReversed(int[] array) {
 		
 			// FIXME create a helper method that can recursively reverse the given array
-			return new int[0];
+		int index = 0 ;
+		int[] reversed = new int[array.length];
+		return toReverseHelper(array, index);
 		
 	}
-
+	
+	public static int[] toReverseHelper(int[] array, int index) {
+		if (index>=array.length - 1) {
+			return 0;
+		}else {
+			int odds = toReverseHelper(values, index+1);
+			if(array[index] % 2!=0) {
+				odds++;
+			}
+			return odds
+		}
+	}
 	/**
 	 * This method uses recursion to compute the greatest common divisor
 	 * for the two input values
